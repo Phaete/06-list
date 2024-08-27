@@ -1,6 +1,6 @@
 package com.phaete;
 
-import java.sql.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,13 +55,13 @@ public class Main {
         }
 
         // add a new element at a specific index
-        list.add(2, 100);
+        list.add(1, 100);
 
         // size of list
         int size = list.size();
 
         // get data
-        Integer x = list.get(2); // returns 100, as we just added the Integer 100 at index 2
+        Integer x = list.get(1); // returns 100, as we just added the Integer 100 at index 2
 
         // for loop with incrementing index
         for (int i = 0; i < list.size(); i++) {
@@ -73,7 +73,7 @@ public class Main {
             System.out.println(i);
         }
 
-        list.add(100, 1909);
+        list.add(2, 1909);
 
         System.out.println(list);
 
@@ -81,6 +81,9 @@ public class Main {
          * Challenges
          */
 
+        System.out.println("----------------------------------------------------");
+
+        // Challenge 1
         List<Student> studentList = new ArrayList<>();
         Student peter = new Student("peter", "parker", 1);
         studentList.add(peter);
@@ -92,6 +95,12 @@ public class Main {
         studentList.add(tony);
 
 
+        School school = new School();
+        school.addStudent(peter);
+        school.addStudent(bruce);
+        school.addStudent(tony);
+
+        System.out.println(school);
 
     }
 }
